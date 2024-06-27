@@ -53,6 +53,7 @@ body {
 .carousel-item img {
     height: 400px;
     object-fit: cover;
+    margin-bottom: 50px;
 }
 
 #carouselExampleCaptions {
@@ -90,30 +91,43 @@ footer {
     padding: 0px 0;
 }
 
-.icono-fb{
-    width: 30px;
+.icono-fb,
+.icono,
+.icono-fb-hd,
+.icono-ig-hd,
+.icono-wsp-hd,
+.icono-carrito {
+    width: 50px;
     height: 50px;
-    margin: 10px;
     transition: transform 0.2s ease-in-out;
-
 }
 
 .icono-ig{
-    width: 33px;
-    height: 50px;
-    margin: 10px;
+    width: 60px;
+    height: 60px;
     transition: transform 0.2s ease-in-out;
-
 }
 
 .icono-wsp{
-    width: 33px;
-    height: 50px;
-    margin: 5px;
+    width: 80px;
+    height: 80px;
     transition: transform 0.2s ease-in-out;
 }
-.icono {
-    width: 50px; 
+
+.icono-fb,
+.icono-ig,
+.icono-wsp {
+    margin: 10px;
+}
+
+.icono-fb-hd,
+.icono-ig-hd,
+.icono-wsp-hd {
+    margin: 5px;
+}
+
+.icono-carrito {
+    width: 50px;
     height: 50px;
     transition: transform 0.2s ease-in-out;
 }
@@ -121,40 +135,7 @@ footer {
 .icono:hover,
 .icono-wsp:hover,
 .icono-ig:hover,
-.icono-fb:hover {
-    transform: translateY(-3px);
-}
-
-
-.icono-fb-hd{
-    width: 30px;
-    height: 50px;
-    margin: 5px;
-    transition: transform 0.2s ease-in-out;
-
-}
-
-.icono-ig-hd{
-    width: 33px;
-    height: 50px;
-    margin: 5px;
-    transition: transform 0.2s ease-in-out;
-
-}
-
-.icono-wsp-hd{
-    width: 33px;
-    height: 50px;
-    margin: 5px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.icono-carrito {
-    width: 50px; 
-    height: 50px; 
-    transition: transform 0.2s ease-in-out;
-}
-
+.icono-fb:hover,
 .icono-carrito:hover,
 .icono-wsp-hd:hover,
 .icono-ig-hd:hover,
@@ -169,10 +150,10 @@ footer p {
 }
 
 .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.2s;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
 }
 
 .card:hover {
@@ -180,6 +161,8 @@ footer p {
 }
 
 .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     height: 250px;
     object-fit: cover;
 }
@@ -189,12 +172,14 @@ footer p {
 }
 
 .card-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    color: #333;
+    margin-bottom: 0.75rem;
 }
 
 .card-text {
-    color: #6c757d;
+    color: #666;
 }
 
 .btn-primary {
@@ -205,8 +190,8 @@ footer p {
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #0069d9;
+    border-color: #0062cc;
 }
 
 .btn-custom {
@@ -221,32 +206,40 @@ footer p {
     border-color: #000000;
 }
 
-main {
-    margin-top: 80px;
-}
-
-.nav-link {
-    position: relative;
+.contenedor {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 30px;
 }
 
-.bi-cart3 {
-    font-size: 1rem;
-    max-width: 50px;
-
-    position: relative;
-    top: -2px;
+.gente-tocando {
+    width: 500px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
 }
 
-.carrito {
-    margin-left: auto;
-    margin-right: 6px; 
-    display: flex;
-    align-items: center;
+.orquesta {
+    width: 600px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+    order: 2;
 }
 
+.pq-instrum {
+    flex: 1;
+    margin-left: 20px;
+}
 
-.navbar-toggler {
-    border-color: white;
+.pq-instrum p,
+.banda-sinfonica {
+    color: #ccc;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.orquesta:hover,
+.gente-tocando:hover {
+    transform: scale(1.05);
 }
