@@ -1,24 +1,22 @@
+/* Estilos base */
+
 body {
     font-family: "MuseoModerno", sans-serif;
     background-color: #000000;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 100%; /* Ajusta el ancho máximo a la pantalla */
     margin: 0 auto;
     padding: 20px;
-}
-
-.header {
-    background-color: #2e2e30;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
 .navbar {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     min-height: 90px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand {
@@ -51,7 +49,8 @@ body {
 }
 
 .carousel-item img {
-    height: 400px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     margin-bottom: 50px;
 }
@@ -62,10 +61,6 @@ body {
 
 .carousel-inner {
     text-align: center;
-}
-
-.carousel-item img {
-    max-width: 100%;
 }
 
 .carousel-caption h2 {
@@ -88,7 +83,7 @@ footer {
     background-color: #f8f9fa;
     color: #000000;
     text-align: center;
-    padding: 0px 0;
+    padding: 20px 0;
 }
 
 .icono-fb,
@@ -97,18 +92,18 @@ footer {
 .icono-ig-hd,
 .icono-wsp-hd,
 .icono-carrito {
-    width: 50px;
+     width: 50px;
     height: 50px;
     transition: transform 0.2s ease-in-out;
 }
 
-.icono-ig{
+.icono-ig {
     width: 60px;
     height: 60px;
     transition: transform 0.2s ease-in-out;
 }
 
-.icono-wsp{
+.icono-wsp {
     width: 80px;
     height: 80px;
     transition: transform 0.2s ease-in-out;
@@ -208,38 +203,103 @@ footer p {
 
 .contenedor {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
-    padding: 30px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.gente-tocando {
-    width: 500px;
+.h2{
+    text-align: center;
+    color: #413e3e;
+    padding: 30px;
+}
+.banda,
+.orquesta {
+    width: 100%;
+    max-width: 400px; /* Máximo ancho, pero flexible */
     border-radius: 10px;
     transition: transform 0.2s ease-in-out;
+    height: auto;
+}
+
+.banda-sinfonica {
+    margin-top: 20px;
 }
 
 .orquesta {
-    width: 600px;
-    border-radius: 10px;
-    transition: transform 0.2s ease-in-out;
     order: 2;
 }
 
-.pq-instrum {
-    flex: 1;
-    margin-left: 20px;
-}
-
-.pq-instrum p,
+.pq-instrum,
 .banda-sinfonica {
     color: #ccc;
     line-height: 1.6;
-    padding: 20px;
 }
 
 .orquesta:hover,
-.gente-tocando:hover {
+.banda:hover {
     transform: scale(1.05);
+}
+
+/* Media Queries para tamaños de pantalla específicos */
+
+/* Estilos para pantallas más pequeñas (ej. tabletas y teléfonos) */
+@media (max-width: 768px) {
+    .container {
+        padding: 35px;
+    }
+
+    .navbar {
+        min-height: 60px;
+    }
+
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .banda,
+    .orquesta {
+        max-width: 100%;
+    }
+}
+
+/* Estilos para pantallas más grandes (ej. pantallas de escritorio) */
+@media (min-width: 992px) {
+    .carousel-item img {
+        height: 500px;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-wrap: wrap; /* Permite el ajuste responsivo */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        margin-bottom: 50px;
+    }
+    
+    .contenedor img {
+        max-width: 50%; /* Asegura que la imagen no supere el ancho del contenedor */
+        height: auto; /* Permite que la altura se ajuste proporcionalmente */
+        border-radius: 10px; /* Opcional: bordes redondeados para la imagen */
+    }
+    
+    .texto {
+        text-align: justify; /* Ajusta el texto justificado */
+        padding: 20px; /* Añade espacio alrededor del texto */
+        max-width: max-content; /* Limita el ancho del texto para una lectura cómoda */
+        margin: 0 auto; /* Centra el texto horizontalmente */
+    }    
+    
+    .orquesta:hover,
+    .banda:hover {
+        transform: scale(1.05);
+    }
 }
