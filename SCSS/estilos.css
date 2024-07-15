@@ -52,7 +52,8 @@ main .carousel-inner {
 main .carousel-item img {
   max-width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 50px;
 }
 main section {
@@ -247,7 +248,8 @@ footer .card-img-top {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   height: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 footer .card-body {
   padding: 1.25rem;
@@ -298,10 +300,11 @@ footer .contenedor img {
 footer .texto {
   text-align: justify;
   padding: 20px;
+  max-width: -moz-max-content;
   max-width: max-content;
   margin: 0 auto;
 }
 footer .orquesta:hover,
 footer .banda:hover {
   transform: scale(1.05);
-}
+}/*# sourceMappingURL=estilos.css.map */

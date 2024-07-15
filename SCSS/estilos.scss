@@ -1,0 +1,269 @@
+/* Estilos para el encabezado */
+header {
+    background-color: rgb(255, 255, 255);
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+
+    .navbar {
+        &-brand {
+            color: #fff;
+            font-weight: bold;
+
+            img {
+                max-width: 50px;
+                height: auto;
+                max-height: 50px;
+            }
+        }
+
+        &-nav {
+            .nav-link {
+                color: #000;
+
+                &:hover,
+                &:focus {
+                    color: #ccc;
+                }
+            }
+
+            .d-flex {
+                margin-left: auto;
+                align-items: center;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        /* Estilos para los iconos de redes sociales y carrito */
+        .icono,
+        .icono-fb,
+        .icono-ig,
+        .icono-wsp,
+        .icono-carrito {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.2s ease-in-out;
+
+            &-ig {
+                width: 60px;
+                height: 60px;
+            }
+
+            &-wsp {
+                width: 80px;
+                height: 80px;
+            }
+
+            &-fb,
+            &-ig,
+            &-wsp {
+                margin: 10px;
+            }
+
+            &-carrito {
+                width: 50px;
+                height: 50px;
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: "MuseoModerno", sans-serif;
+    background-color: #000;
+}
+
+main .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main #carouselExampleCaptions {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+main .carousel-inner {
+    text-align: center;
+}
+
+main .carousel-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+main section {
+    text-align: center;
+}
+
+main section h2 {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+main .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main .contenedor-img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+main .banda,
+main .orquesta {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+    height: auto;
+    text-align: center;
+
+    &-sinfonica {
+        margin-top: 20px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+main .orquesta {
+    order: 2;
+}
+
+main .pq-instrum,
+main .banda-sinfonica {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+main .card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    width: 100%; /* Tarjetas ocupan el ancho disponible */
+    margin-bottom: 20px;
+}
+
+main .card:hover {
+    transform: translateY(-5px);
+}
+
+main .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+
+main .card-body {
+    padding: 1.25rem;
+}
+
+main .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+main .card-text {
+    color: #666;
+}
+
+main .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+main .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+main .texto {
+    text-align: justify;
+    padding: 20px;
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #f8f9fa;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #000;
+}
+
+footer .icono,
+footer .icono-fb,
+footer .icono-ig,
+footer .icono-wsp,
+footer .icono-carrito {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease-in-out;
+
+    &-ig {
+        width: 60px;
+        height: 60px;
+    }
+
+    &-wsp {
+        width: 80px;
+        height: 80px;
+    }
+
+    &-fb,
+    &-ig,
+    &-wsp {
+        margin: 10px;
+    }
+
+    &-fb-hd,
+    &-ig-hd,
+    &-wsp-hd {
+        margin: 5px;
+    }
+
+    &-carrito {
+        width: 50px;
+        height: 50px;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+}
