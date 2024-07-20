@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+// Variables de color
+$color-blanco: #ffffff;
+$color-negro: #000000;
+$color-gris: #ccc;
+
+// Estilos para el header
+
+.navbar {
+    background-color: $color-blanco;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+
+    .navbar-brand {
+        color: $color-negro;
+        font-weight: bold;
+
+        img {
+            max-width: 50px;
+            max-height: 50px;
+            height: auto;
+        }
+    }
+
+    .navbar-nav {
+        .nav-link {
+            color: $color-negro;
+            transition: color 0.2s ease-in-out;
+
+            &:hover,
+            &:focus {
+                color: #666666;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        background-color: $color-blanco;
+
+        .dropdown-item {
+            color: $color-negro;
+
+            &:hover {
+                background-color: #f8f9fa;
+            }
+        }
+    }
+
+    .carrito {
+        margin-left: auto;
+    }
+
+    .icono-carrito {
+        max-width: 30px;
+        height: auto;
+    }
+}
+
+// Estilos para el cuerpo del sitio
+body {
+    font-family: "MuseoModerno", sans-serif;
+    background-color: $color-negro;
+    padding-top: 100px;
+
+    main {
+        .container {
+            margin-top: 20px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        section {
+            text-align: center;
+
+            h2 {
+                color: $color-blanco;
+                font-size: 2.5rem;
+                margin-top: 20px;
+                font-weight: normal;
+            }
+        }
+
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            padding: 20px;
+            box-sizing: border-box;
+
+            .contenedor-img {
+                max-width: 50%;
+                height: auto;
+                border-radius: 10px;
+            }
+        }
+
+        .banda,
+        .orquesta {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.2s ease-in-out;
+
+            &.sinfonica {
+                margin-top: 20px;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .pq-instrum,
+        .banda-sinfonica {
+            color: $color-blanco;
+            line-height: 1.6;
+        }
+
+        .card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+            &:hover {
+                transform: translateY(-5px) scale(1.02);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .card-img-top {
+                height: 250px;
+                -o-object-fit: cover;
+                object-fit: cover;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            .card-body {
+                padding: 1.25rem;
+
+                .card-title {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: #333;
+                    margin-bottom: 0.75rem;
+                }
+
+                .card-text {
+                    color: #666;
+                }
+            }
+
+            .btn-primary {
+                background-color: $color-negro;
+                border-color: $color-negro;
+                padding: 0.375rem 0.75rem;
+                font-size: 0.875rem;
+
+                &:hover {
+                    background-color: darken($color-negro, 10%);
+                    border-color: darken($color-negro, 10%);
+                }
+            }
+
+            .btn-custom {
+                background-color: $color-blanco;
+                color: $color-negro;
+                border-color: $color-negro;
+
+                &:hover {
+                    background-color: darken($color-blanco, 5%);
+                    color: $color-negro;
+                    border-color: $color-negro;
+                }
+            }
+        }
+
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .contenedor img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .texto {
+            text-align: justify;
+            padding: 20px;
+            max-width: -moz-max-content;
+            max-width: max-content;
+            margin: 0 auto;
+        }
+
+        .orquesta,
+        .banda {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .orquesta:hover,
+        .banda:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+// Estilos para la página de error 404
+
+.error-404 {
+    background-color: $color-negro;
+    color: $color-blanco;
+    font-family: "MuseoModerno", sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.h1-404 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.p-404 {
+    font-size: 1.2rem;
+    font-family: "MuseoModerno", sans-serif;
+}
+
+// Estilos para el footer
+footer {
+    background-color: #f8f9fa;
+    color: $color-negro;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+
+    p {
+        margin-top: 10px;
+        font-size: 1rem;
+        color: $color-negro;
+    }
+
+    .icono,
+    .icono-ig,
+    .icono-wsp,
+    .icono-carrito {
+        width: 50px;
+        height: 50px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .icono-fb {
+        width: 35px;
+        height: 35px;
+    }
+
+    .icono,
+    .icono-ig,
+    .icono-wsp,
+    .icono-fb {
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+}
