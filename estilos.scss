@@ -227,17 +227,15 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-}
-
-.h1-404 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.p-404 {
-    font-size: 1.2rem;
-    font-family: "MuseoModerno", sans-serif;
+    .h1-404 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .p-404 {
+        font-size: 1.2rem;
+        font-family: "MuseoModerno", sans-serif;
+    }
 }
 
 // Estilos para el footer
