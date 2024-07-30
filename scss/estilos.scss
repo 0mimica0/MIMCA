@@ -5,7 +5,9 @@ $color-blanco: #ffffff;
 $color-negro: #000000;
 $color-gris: #ccc;
 
-// Estilos para el header
+/* Fonts no cargan cuando no hay conection, F in the chat */
+
+/* Estilos para header */
 
 .navbar {
     background-color: $color-blanco;
@@ -59,7 +61,7 @@ $color-gris: #ccc;
     }
 }
 
-// Estilos para el cuerpo del sitio
+/* Estilos para body */
 body {
     font-family: "MuseoModerno", sans-serif;
     background-color: $color-negro;
@@ -216,7 +218,7 @@ body {
     }
 }
 
-// Estilos para la página de error 404
+/* Estilos para error 404 */
 
 .error-404 {
     background-color: $color-negro;
@@ -242,9 +244,9 @@ body {
     }
 }
 
-// Estilos para el footer
+/* Estilos para footer */
 footer {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     color: $color-negro;
     text-align: center;
     padding: 20px 0;
